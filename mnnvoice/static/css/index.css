@@ -1,0 +1,91 @@
+html{
+    padding: 0px;
+    height: 100%;
+}
+body{
+    margin: 0px;
+    height: 100%;
+}
+
+.root{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+.content{
+    width: 100%;
+    flex:1;
+    position: relative;
+}
+.card4{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 10px 10px 0px ;
+    background-color: #C8ADA7;
+    background-image: linear-gradient(to right,#C9ADA7,#F2E9E4);
+}
+.card3{
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 100%;
+    background-image: linear-gradient(to right,#9A8C98,#C9ADA7);
+    border-radius: 0px 10px 10px 0px ;
+}
+.card2{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 100%;
+    background-image: linear-gradient(to right,#4A4E69,#9A8C98);
+    border-radius: 0px 10px 10px 0px ;
+}
+.header-left{
+    flex: 7;
+    height: 100px;
+    
+}
+.header-right{
+    display: flex;
+    flex: 6;
+    height: 100px;
+}
+.header-tab{
+    border-radius: 10px 10px 0px 0px ;
+    height: 85px;
+    width: 150px;
+    margin-top: 15px;
+    
+}
+.header-tab-1{
+    z-index: 6;
+    background-image: linear-gradient(to right,#393B56,#3D405B);
+}
+.header-tab-2{
+    z-index: 8;
+    position: relative;
+    left: -20px;
+    background-image: linear-gradient(to right,#807889,#887E8E);
+}
+.header-tab-3{
+    z-index: 7;
+    position: relative;
+    left: -40px;
+    background-image: linear-gradient(to right,#BDA4A3,#C2A8A5);
+}
+.header-tab-4{
+    z-index: 6;
+    position: relative;
+    left: -60px;
+    background-image: linear-gradient(to right,#ECDFDA,#F1E7E2);
+}
+.header-tab-select{
+    z-index: 10;
+}
+.card-select{
+    z-index: 10;
+}
