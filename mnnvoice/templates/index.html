@@ -10,7 +10,10 @@
 <body>
     <div class="root">
         <div class="header">
-            <div class="header-left"></div>
+            <div class="header-left">
+                <div class="logo"></div>
+                <div class="searchbar"></div>
+            </div>
             <div class="header-right">
                 <div class="header-tab header-tab-1 header-tab-select"></div>
                 <div class="header-tab header-tab-2"></div>
@@ -20,7 +23,7 @@
         </div>
         <div class="content">
             <div class="card4 card">
-                <iframe id="reportFrame" width="100%" height="100%" src=""></iframe>
+                <iframe id="mnnvoice-frame" width="100%" height="100%"></iframe>
             </div>
             <div class="card3 card"></div>
             <div class="card2 card"></div>
@@ -32,13 +35,15 @@
     $(document).ready(function(){
         
         // $('#reportFrame').src=window.location.host+"/home"
-        document.getElementById("reportFrame").src="mnnvoice"
+        document.getElementById("mnnvoice-frame").src="mnnvoice"
         $(".header-tab").click(function(e){
             $(".header-tab").removeClass("header-tab-select");
+           // $(".header-tab-3").removeClass("header-tab-3-adjustz");
             $(e.currentTarget).addClass("header-tab-select");
             let classlist = e.currentTarget.className.split(" ");
             $(".card").removeClass("card-select");
-            if(classlist.includes("header-tab-1")){  
+            if(classlist.includes("header-tab-1")){
+                $(".header-tab-3").removeClass("header-tab-3-adjustz");
             }
             if(classlist.includes("header-tab-2")){
                 $(".card2").addClass("card-select");
@@ -47,6 +52,7 @@
                 $(".card3").addClass("card-select");
             }
             if(classlist.includes("header-tab-4")){
+                $(".header-tab-3").addClass("header-tab-3-adjustz");
                 $(".card4").addClass("card-select");
             }
         })

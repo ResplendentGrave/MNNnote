@@ -6,7 +6,9 @@ body{
     margin: 0px;
     height: 100%;
 }
-
+iframe{
+    border: none;
+}
 .root{
     height: 100%;
     display: flex;
@@ -69,23 +71,40 @@ body{
     z-index: 8;
     position: relative;
     left: -20px;
-    background-image: linear-gradient(to right,#807889,#887E8E);
+    background-image: linear-gradient(to right,#7F7788,#857C8C);
 }
 .header-tab-3{
     z-index: 7;
     position: relative;
     left: -40px;
-    background-image: linear-gradient(to right,#BDA4A3,#C2A8A5);
+    background-image: linear-gradient(to right,#BCA4A3,#C0A7A4);
+}
+.header-tab-3-adjustz{
+    z-index: 9;
 }
 .header-tab-4{
     z-index: 6;
     position: relative;
     left: -60px;
-    background-image: linear-gradient(to right,#ECDFDA,#F1E7E2);
+    background-image: linear-gradient(to right,#EADDD8,#EEE3DE);
 }
 .header-tab-select{
     z-index: 10;
 }
 .card-select{
     z-index: 10;
+}
+.logo{
+
+    position: relative;
+    width: 200px;
+    height: 80px;
+    background-color: gray;
+}
+.searchbar{
+
+    position: relative;
+    width: 350px;
+    height: 70px;
+    background-color: silver;
 }
