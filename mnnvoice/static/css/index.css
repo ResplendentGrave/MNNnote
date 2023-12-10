@@ -47,11 +47,12 @@ iframe{
     border-radius: 0px 10px 10px 0px ;
 }
 .header-left{
+    display: flex;
     flex: 7;
     height: 100px;
-    
 }
 .header-right{
+    
     display: flex;
     flex: 6;
     height: 100px;
@@ -88,6 +89,18 @@ iframe{
     left: -60px;
     background-image: linear-gradient(to right,#EADDD8,#EEE3DE);
 }
+.header-tab-text{
+    margin: 0;
+    font-family: 'source-han-sans-japanese', sans-serif;
+    color: white;
+    margin-left: 30px;
+}
+.header-tab-text-adjust{
+    margin-top: 20px;
+}
+.margin-adjust{
+    margin-left: 40px;
+}
 .header-tab-select{
     z-index: 10;
 }
@@ -95,16 +108,61 @@ iframe{
     z-index: 10;
 }
 .logo{
-
+    flex: 1;
     position: relative;
-    width: 200px;
     height: 80px;
-    background-color: gray;
+    margin-top: 15px;
+    left: 100px;
 }
 .searchbar{
-
+    flex: 1;
     position: relative;
-    width: 350px;
     height: 70px;
-    background-color: silver;
+    margin-top: 20px;
+    
+}
+.searchbar-border{
+    width: 350px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+.searchbar-input{
+    width: 280px;
+    height: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    color: #BBBBBB;
+    
+}
+.searchbar-button-border{
+    width: 50px;
+    height: 50px;
+    border-left: 1px solid;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.searchbar-button{
+    width: 29px;    
+    height: 40px;
+    margin-left: 10px;
+    background-color: white;
+    border:none;
+    background-image: url(../image/ze-search\ 1.svg);
+} 
+.logo-text-jp{
+    margin: 0px;
+    font-size: 28px;
+    font-family: 'source-han-sans-japanese', sans-serif;
+    color: #666B92;
+}
+.logo-text-en{
+    margin: 0px;
+    font-size: 21px;
+    font-family: 'source-han-sans-japanese', sans-serif;
+    color: #666B92;
 }
