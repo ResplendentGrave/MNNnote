@@ -47,6 +47,13 @@ iframe{
     background-image: linear-gradient(to right,#4A4E69,#9A8C98);
     border-radius: 0px 10px 10px 0px ;
 }
+.card1{
+    position: absolute;
+    width: calc(100% - 60px);
+    height: 100%;
+    border-radius: 0px 10px 10px 0px ;
+    background-image: linear-gradient(to right,#22223B,#4A4E69);
+}
 .header-left{
     display: flex;
     flex: 7;
