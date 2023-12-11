@@ -8,6 +8,7 @@ body{
 }
 iframe{
     border: none;
+    
 }
 .root{
     height: 100%;
@@ -118,7 +119,7 @@ iframe{
     flex: 1;
     position: relative;
     height: 70px;
-    margin-top: 20px;
+    margin-top: 25px;
     
 }
 .searchbar-border{
