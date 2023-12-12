@@ -1,6 +1,7 @@
 html{
     padding: 0px;
     height: 100%;
+    overflow: hidden;
 }
 body{
     margin: 0px;
@@ -173,4 +174,8 @@ iframe{
     font-size: 21px;
     font-family: 'source-han-sans-japanese', sans-serif;
     color: #666B92;
+}
+.header-disable{
+    height: 0px;
+    display: none;
 }

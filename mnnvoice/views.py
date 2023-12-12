@@ -6,3 +6,6 @@ def index(request):
 
 def mnnvoice(request):
     return render(request,"mnnvoice.html")
+
+def search(request):
+    return render(request,"search.html")
