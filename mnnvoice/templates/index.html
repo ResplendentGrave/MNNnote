@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/index.css">
     <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/axios.min.js"></script>
     <title>みんなのノート</title>
 </head>
 
@@ -67,6 +68,9 @@
 
 </html>
 <script>
+    //axios test
+
+
     window.showHeader = function (e) {
         $("#index-header").removeClass("header-disable");
         $(".header-tab-3").removeClass("header-tab-3-adjustz");
@@ -128,5 +132,15 @@
 
         window.addEventListener('hashchange', hashchange)
     });
+    // async function fun() {
+    //     axios.post('api/reloc', {
+           
+    //         data: {
+    //             ID: 12345
+    //         }
+    //     })
+    // }
+    // fun();
+
 
 </script>

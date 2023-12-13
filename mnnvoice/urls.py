@@ -9,4 +9,5 @@ urlpatterns = [
     path('',views.index, name='mnnvoice_home'),
     path('mnnvoice/',views.mnnvoice),
     path('search/',views.search),
+    path('api/reloc',views.reloc),
 ]
