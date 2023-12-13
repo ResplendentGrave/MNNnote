@@ -9,3 +9,9 @@ def mnnvoice(request):
 
 def search(request):
     return render(request,"search.html")
+
+def note(request):
+    return render(request,"note.html")
+
+def lecture(request):
+    return render(request,"lecture.html")
