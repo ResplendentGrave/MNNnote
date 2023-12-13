@@ -49,8 +49,12 @@
             <div class="card4 card">
                 <iframe id="mnnvoice-frame" width="100%" height="100%"></iframe>
             </div>
-            <div class="card3 card"></div>
-            <div class="card2 card"></div>
+            <div class="card3 card">
+                <iframe id="note-frame" width="100%" height="100%"></iframe>
+            </div>
+            <div class="card2 card">
+                <iframe id="lecture-frame" width="100%" height="100%"></iframe>
+            </div>
             <div class="card1 card">
                 <iframe id="search-frame" width="100%" height="100%"></iframe>
             </div>
@@ -93,6 +97,8 @@
             
         }
         document.getElementById("search-frame").src="search"
+        document.getElementById("lecture-frame").src="lecture"
+        document.getElementById("note-frame").src="note"
         document.getElementById("mnnvoice-frame").src="mnnvoice"
         //切换分页效果
         $(".header-tab").click(function(e){

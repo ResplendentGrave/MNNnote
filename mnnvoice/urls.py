@@ -8,5 +8,7 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('home/',views.index, name='mnnvoice_home'),
     path('home/mnnvoice/',views.mnnvoice),
-    path('home/search/',views.search)
+    path('home/search/',views.search),
+    path('home/note/',views.note),
+    path('home/lecture/',views.lecture)
 ]
