@@ -3,5 +3,7 @@ from django.urls import path, include
 # path('', include('[appname].urls'))
 urlpatterns = [
     path('', include('userlogapp.urls')),
-    #path('', include('mnnvoice.urls')),
+    path('', include('mnnvoice.urls')),
+    path('',include('lecture.urls')),
+    path('',include('note.urls')),
 ]

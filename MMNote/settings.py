@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'userlogapp.apps.UserlogappConfig',
     'mnnvoice.apps.MnnvoiceConfig',
+    'lecture.apps.LectureConfig',
+    'note.apps.NoteConfig',
 ]
 
 MIDDLEWARE = [

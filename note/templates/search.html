@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/search.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 class="animation">SEARCH FRAME</h1>
+    <button id="button">AAA</button> -->
+    <div class="search-content">
+        <div class="upper">
+            <div class="search-logo">
+                <div class="logo-left"></div>
+                <div class="logo-right"></div>
+            </div>
+            <div class="search-p">
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="search-searchbar"></div>
+            <div class="search-footer"></div> 
+        </div>
+   
+    </div>
+</body>
+</html>
+<script>
+    //window.$=window.parent.$;
+    $(document).ready(function()
+    {
+       $("#button").click(function(e){
+            console.log(window.parent.toLecture());
+       })
+       //$("#button").click(function(1,2){
+       //     console.log(window.parent.showHeader());
+       // })
+       //--->parent page
+       // window.showHeader=function(a,b)
+       
+    })
+</script>
