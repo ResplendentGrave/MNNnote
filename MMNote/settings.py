@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'mnnvoice.apps.MnnvoiceConfig',
     'lecture.apps.LectureConfig',
     'note.apps.NoteConfig',
+    'upload.apps.UploadConfig',
 ]
 
 MIDDLEWARE = [

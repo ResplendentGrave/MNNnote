@@ -6,4 +6,5 @@ urlpatterns = [
     path('home/', include('mnnvoice.urls')),
     path('home/lecture/',include('lecture.urls')),
     path('home/note/',include('note.urls')),
+    path('home/upload/',include('upload.urls')),
 ]

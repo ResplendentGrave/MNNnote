@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.urls import path
-from note import views
+from upload import views
 
-app_name = 'note_app'
+app_name = 'upload_app'
 
 urlpatterns = [
-    path('',views.note),
+    path('',views.upload),
     #path('upload/',views.note),
 ]
