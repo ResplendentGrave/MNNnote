@@ -5,5 +5,6 @@ from note import views
 app_name = 'note_app'
 
 urlpatterns = [
-    path('',views.note)
+    path('',views.note),
+    
 ]
