@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +8,61 @@
     <script src="/static/js/jquery.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <!-- <h1 class="animation">SEARCH FRAME</h1>
     <button id="button">AAA</button> -->
     <div class="search-content">
         <div class="upper">
             <div class="search-logo">
-                <div class="logo-left"></div>
-                <div class="logo-right"></div>
+                <div class="logo-left">
+                    <img src="/static/image/logoleft.png" alt="" id="logoleft" class="fade-in-left">
+                </div>
+                <div class="logo-right">
+                    <img src="/static/image/logoright.png" alt="" id="logoright" class="fade-in-right">
+                </div>
             </div>
-            <div class="search-p">
-                <p></p>
-                <p></p>
-                <p></p>
+            <div class="text-container">
+                <div class="search-p fade-in-left">
+                    <p class="index-para">岩手大学学生同士をONE TEAMに</p>
+                    <p class="index-para">Make the Iwate University's Students</p>
+                    <p class="index-para">became One Team</p>
+                </div>
             </div>
+
         </div>
         <div class="lower">
-            <div class="search-searchbar"></div>
-            <div class="search-footer"></div> 
+            <div class="searchbar">
+                <div class="searchbar-border">
+                    <input type="search" placeholder="検索" class="searchbar-input">
+                    <div class="searchbar-button-border">
+                        <button type="button" class="searchbar-button" id="button"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="search-footer">
+                <div class="footer-container fade-in-rooter">
+                    <p class="rooter-p" id="rooter-p-spci">お問い合わせ</p>
+                    <p class="rooter-p">よくある質問</p>
+                    <p class="rooter-p">メールアドレス：support@minnano-nooto</p>
+                </div>
+            </div>
         </div>
-   
     </div>
 </body>
+
 </html>
 <script>
     //window.$=window.parent.$;
-    $(document).ready(function()
-    {
-       $("#button").click(function(e){
+    $(document).ready(function () {
+        $("#button").click(function (e) {
             console.log(window.parent.toLecture());
-       })
-       //$("#button").click(function(1,2){
-       //     console.log(window.parent.showHeader());
-       // })
-       //--->parent page
-       // window.showHeader=function(a,b)
-       
+        })
+        //$("#button").click(function(1,2){
+        //     console.log(window.parent.showHeader());
+        // })
+        //--->parent page
+        // window.showHeader=function(a,b)
+
     })
 </script>
