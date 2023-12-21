@@ -71,6 +71,7 @@ iframe{
     height: 85px;
     width: 150px;
     margin-top: 15px;
+    /* text-decoration:none;  */
     
 }
 .header-tab-1{
@@ -145,6 +146,7 @@ iframe{
     border: 1px solid #BBBBBB;
     border-radius: 10px;
     color: #BBBBBB;
+
     
 }
 .searchbar-button-border{
@@ -179,3 +181,6 @@ iframe{
     height: 0px;
     display: none;
 }
+a, a:link, a:visited, a:focus, a:hover, a:active{
+    text-decoration:none; 
+  }

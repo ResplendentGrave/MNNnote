@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/index.css">
     <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/axios.min.js"></script>
     <title>みんなのノート</title>
 </head>
+
 <body>
+
     <div class="root">
         <div class="header header-disable" id="index-header">
             <div class="header-left">
@@ -19,101 +23,125 @@
                     <div class="searchbar-border">
                         <input type="search" placeholder="検索" class="searchbar-input">
                         <div class="searchbar-button-border">
-                            <button type="button" class="searchbar-button"> </button>   
+                            <button type="button" class="searchbar-button"> </button>
                         </div>
-                          
+
                     </div>
-                    
+
                 </div>
             </div>
             <div class="header-right">
-                <div class="header-tab header-tab-1 header-tab-select">
+                <a class="header-tab header-tab-1 header-tab-select" href="#homepage">
                     <p class="header-tab-text header-tab-text-adjust">ホームページ</p>
                     <p class="header-tab-text">Home Page</p>
-                </div>
-                <div class="header-tab header-tab-2">
+                </a>
+                <a class="header-tab header-tab-2" href="#lecture">
                     <p class="header-tab-text header-tab-text-adjust margin-adjust">講義</p>
                     <p class="header-tab-text margin-adjust">Lecture</p>
-                </div>
-                <div class="header-tab header-tab-3">
+                </a>
+                <a class="header-tab header-tab-3" href="#note">
                     <p class="header-tab-text header-tab-text-adjust margin-adjust">ノート</p>
                     <p class="header-tab-text margin-adjust">Note</p>
-                </div>
-                <div class="header-tab header-tab-4">
+                </a>
+                <a class="header-tab header-tab-4" href="#mnnvoice">
                     <p class="header-tab-text header-tab-text-adjust">みんなの声</p>
                     <p class="header-tab-text">Comment</p>
-                </div>
+                </a>
             </div>
         </div>
         <div class="content">
             <div class="card4 card">
                 <iframe id="mnnvoice-frame" width="100%" height="100%"></iframe>
             </div>
-            <div class="card3 card"></div>
-            <div class="card2 card"></div>
+            <div class="card3 card">
+                <iframe id="note-frame" width="100%" height="100%"></iframe>
+            </div>
+            <div class="card2 card">
+                <iframe id="lecture-frame" width="100%" height="100%"></iframe>
+            </div>
             <div class="card1 card">
                 <iframe id="search-frame" width="100%" height="100%"></iframe>
             </div>
         </div>
     </div>
 </body>
+
 </html>
 <script>
-    $(document).ready(function(){
+    //axios test
+
+
+    window.showHeader = function (e) {
+        $("#index-header").removeClass("header-disable");
+        $(".header-tab-3").removeClass("header-tab-3-adjustz");
+    }
+    //to subpage
+    window.toSearch = function (str) {
+        $(".header-tab-3").removeClass("header-tab-3-adjustz");
+        $("#index-header").addClass("header-disable");
+        $(".card").removeClass("card-select");
+        $(".header-tab-1").removeClass("header-tab-select");
+    }
+    window.toLecture = function (str) {
+        showHeader();
+        $(".card").removeClass("card-select");
+        $(".card2").addClass("card-select");
+        $(".header-tab").removeClass("header-tab-select");
+        $(".header-tab-2").addClass("header-tab-select");
+    }
+    window.toNote = function (str) {
+        showHeader();
+        $(".card").removeClass("card-select");
+        $(".card3").addClass("card-select");
+        $(".header-tab").removeClass("header-tab-select");
+        $(".header-tab-3").addClass("header-tab-select");
+    }
+    window.toVoice = function (str) {
+        showHeader();
+        $(".card").removeClass("card-select");
+        $(".card4").addClass("card-select");
+        $(".header-tab").removeClass("header-tab-select");
+        $(".header-tab-4").addClass("header-tab-select");
+        $(".header-tab-3").addClass("header-tab-3-adjustz");
+    
+    }
+    function hashchange() {
+        let hash = document.location.hash;
+        if (hash === '#homepage') {
+            window.toSearch();
+        }
+        if (hash === '#lecture') {
+            window.toLecture();
+        }
+        if (hash === '#note') {
+            window.toNote();
+        }
+        if (hash === '#mnnvoice') {
+            window.toVoice();
+        }
+    }
+    $(document).ready(function () {
+        hashchange();
         //iframe分页效果
-        window.showHeader=function(e){
-            $("#index-header").removeClass("header-disable");
-            $(".header-tab-3").removeClass("header-tab-3-adjustz");
-        }
-        window.toSearch=function(str){
-            $("#index-header").addClass("header-disable");
-            $(".card").removeClass("card-select");
-            $(".header-tab-1").removeClass("header-tab-select");
-        }
-        window.toLecture=function(str){
-            showHeader();
-            $(".card").removeClass("card-select");
-            $(".card2").addClass("card-select");
-            $(".header-tab").removeClass("header-tab-select");
-            $(".header-tab-2").addClass("header-tab-select");
-        }
-        window.toNote=function(str){
-            showHeader();
-            $(".card").removeClass("card-select");
-            $(".card3").addClass("card-select");
-            $(".header-tab").removeClass("header-tab-select");
-            $(".header-tab-3").addClass("header-tab-select");
-        }
-        window.toVoice=function(str){
-            showHeader();
-            $(".card").removeClass("card-select");
-            $(".card4").addClass("card-select");
-            $(".header-tab").removeClass("header-tab-select");
-            $(".header-tab-4").addClass("header-tab-select");
-            
-        }
-        document.getElementById("search-frame").src="search"
-        document.getElementById("mnnvoice-frame").src="mnnvoice"
-        //切换分页效果
-        $(".header-tab").click(function(e){
-            //拆分数据
-            let classlist = e.currentTarget.className.split(" ");
-            if(classlist.includes("header-tab-1")){
-                $(".header-tab-3").removeClass("header-tab-3-adjustz");
-                window.toSearch();
-            }
-            if(classlist.includes("header-tab-2")){
-                window.toLecture();
-            }
-            if(classlist.includes("header-tab-3")){
-                window.toNote();
-            }
-            if(classlist.includes("header-tab-4")){
-                window.toVoice();
-                $(".header-tab-3").addClass("header-tab-3-adjustz");
-                
-            }
-        })
-});
+
+        document.getElementById("search-frame").src = "search"
+        document.getElementById("lecture-frame").src = "lecture"
+        document.getElementById("note-frame").src = "note"
+        document.getElementById("mnnvoice-frame").src = "mnnvoice"
+        //路由跳转
+
+
+        window.addEventListener('hashchange', hashchange)
+    });
+    // async function fun() {
+    //     axios.post('api/reloc', {
+           
+    //         data: {
+    //             ID: 12345
+    //         }
+    //     })
+    // }
+    // fun();
+
 
 </script>
