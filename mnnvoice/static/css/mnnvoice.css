@@ -54,7 +54,7 @@ body{
 }
 #list-title{
     border: 2px solid #FFFFFF;
-    border-radius: 2px;
+    border-radius: 4px;
     margin-bottom: 20px;
 }
 #list-last{
