@@ -1,6 +1,12 @@
 from django import forms
 
-class UploadForm(forms.Form):
-    name = forms.CharField()
-    note_title = forms.CharField()
-    file = forms.FileField()
+from .models import UploadModel
+
+class UploadForm(forms.ModelForm):
+    note_title = forms.CharField(label='ノートタイトル')
+    file       = forms.FileField(label='ノートをアップロード')
+
+    class Meta:
+        model = UploadModel
+        fields = ["note_title", "create_user", "file", "lecture_choice", "lecture_model"]
+    
