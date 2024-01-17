@@ -13,7 +13,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-.lecture-list-container{
+/* .lecture-list-container{
     height: 100%;
     width: 100%;
     flex: 1;
@@ -90,4 +90,4 @@ body{
     font-size: 16px;
     margin-top: 3px;
     margin-bottom: 3px;
-}
+} */
