@@ -1,22 +1,35 @@
 from django.db import models
+from django.utils import timezone
 
-class uploadFileMpdel(models.Model):
-    name = models.CharField(max_length=255)
-    title1 = models.CharField(max_length=255)
-    title2 = models.CharField(max_length=255)
-    title3 = models.CharField(max_length=255)
-    title4 = models.CharField(max_length=255)
-    title5 = models.CharField(max_length=255)
-    title6 = models.CharField(max_length=255)
-    title7 = models.CharField(max_length=255)
-    title8 = models.CharField(max_length=255)
-    title9 = models.CharField(max_length=255)
-    title10 = models.CharField(max_length=255)
-    title11= models.CharField(max_length=255)
-    title12 = models.CharField(max_length=255)
-    title13= models.CharField(max_length=255)
-    title14 = models.CharField(max_length=255)
+from lecture.models import LectureMpdel
+
+def SavePath(instance, filename):
+    return f'{instance.lecture_model}/{instance.lecture_choice}/{filename}'
+
+lecture_choices = [
+    ("1st" , "1回目"),
+    ("2st" , "2回目"),
+    ("3st" , "3回目"),
+    ("4st" , "4回目"),
+    ("5st" , "5回目"),
+    ("6st" , "6回目"),
+    ("7st" , "7回目"),
+    ("8st" , "8回目"),
+    ("9st" , "9回目"),
+    ("10st" , "10回目"),
+    ("11st" , "11回目"),
+    ("12st" , "12回目"),
+    ("13st" , "13回目"),
+    ("14st" , "14回目"),
+]
+
+class UploadModel(models.Model):
+    note_title = models.CharField(max_length=255)
+    create_user = models.CharField(max_length=128, default="名無しさん")
+    file = models.FileField(upload_to=SavePath)
+    create_time = models.DateTimeField(default=timezone.now)
+    lecture_choice = models.CharField(max_length=200, choices=lecture_choices, default="1st")
+    lecture_model = models.ForeignKey(LectureMpdel, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
-
+        return self.note_title

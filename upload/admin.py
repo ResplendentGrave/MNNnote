@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import uploadFileMpdel
 # Register your models here.
+from .models import UploadModel
 
-admin.site.register(uploadFileMpdel)
+admin.site.register(UploadModel)
