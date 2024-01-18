@@ -8,7 +8,13 @@ def upload(request):
     """もしリクエストがPOSTの場合"""
     if request.method == "POST":
         forms = UploadForm(request.POST or None, request.FILES or None)
+        #POST内容が正しい時（バリデーションチェック）
         if forms.is_valid():
+            #もしユーザーがログインしていたら
+            if request.user.is_authenticated:
+                forms.instance.create_user = request.user.username
+            else:
+                print('ログインしていないユーザーです!')
             forms.save()
         return redirect("/home/#note")
 
