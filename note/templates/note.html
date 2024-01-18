@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,53 +8,156 @@
     <script src="/static/js/jquery.min.js"></script>
     <link rel="stylesheet" href="/static/css/note.css">
 </head>
+
 <body>
     <div class="note-content">
         <div class="upper">
             <div class="note-list">
                 <div class="note-list-content">
-                    <div class="note-list-row" id="list-head"></div>
-                    <div class="note-list-row"></div>
-                    <div class="note-list-row"></div>
-                    <div class="note-list-row"></div>
-                    <div class="note-list-row"></div>
-                    <div class="note-list-row"></div>
-                    <div class="note-list-row"></div>
-                    <div class="note-list-row"></div>
-                    <div class="note-list-row"></div>
-                    <div class="note-list-row" id="list-end"></div>
+                    <div class="note-list-row" id="list-head">
+                        <p class="note-list-row-p" id="list-head-p">lecture title</p>
+                    </div>
+                    <div class="note-list-row">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
+                    <div class="note-list-row">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
+                    <div class="note-list-row">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
+                    <div class="note-list-row">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
+                    <div class="note-list-row">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
+                    <div class="note-list-row">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
+                    <div class="note-list-row">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
+                    <div class="note-list-row">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
+                    <div class="note-list-row" id="list-end">
+                        <p class="note-list-row-p">lecture name</p>
+                    </div>
                 </div>
             </div>
-            <div class="note-area"></div>
+            <div class="note-area">
+                <div class="note-area-upper">
+                    <div class="note-arr" id="note1">note1</div>
+                    <div class="note-arr" id="note2">note2</div>
+                    <div class="note-arr" id="note3">note3</div>
+                </div>
+                <div class="note-area-lower">
+                    <div class="note-arr" id="note4">note4</div>
+                    <div class="note-arr" id="note5">note5</div>
+                    <div class="note-arr" id="note6">note6</div>
+                </div>
+            </div>
         </div>
         <div class="middle">
             <div class="middle-left">
                 <div class="pagenation">
                     <nav style="text-align: center; display:flex; justify-content: center;">
                         <ul style="display: flex; flex-direction: row; gap: 8px;">
-                            <li style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;"><a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true" style="color: gray;">&lt</span></a></li>
-                            <li style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;"><a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true" style="color: gray;">1</span></a></li>
-                            <li style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;"><a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true" style="color: gray;">2</span></a></li>
-                            <li style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;"><a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true" style="color: gray;">3</span></a></li>
-                            <li style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;"><a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true" style="color: gray;">4</span></a></li>
-                            <li style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;"><a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true" style="color: gray;">5</span></a></li>
-                            <li style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;"><a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true" style="color: gray;">&gt</span></a></li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">&lt</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">1</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">2</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">3</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">4</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">5</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">&gt</span></a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <div class="middle-right"></div>
+            <div class="middle-right">
+                <div class="pagenation">
+                    <nav style="text-align: center; display:flex; justify-content: center;">
+                        <ul style="display: flex; flex-direction: row; gap: 8px;">
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">&lt</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">1</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">2</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">3</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">4</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">5</span></a>
+                            </li>
+                            <li
+                                style="width: 30px; height: 30px; list-style: none; background-color: lightgray; padding-top: 5px; border-radius:3px;">
+                                <a href="#" class="page-link" style="text-decoration: none; "><span area-hidden="true"
+                                        style="color: gray;">&gt</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
         <div class="lower">
             <div class="footer">
-                    <p class="footer-content-p" id="footer-content-p-spec">お問い合わせ</p>
-                    <p class="footer-content-p">よくある質問</p>
-                    <p class="footer-content-p">電話番号：010-00000000</p>
-                    <p class="footer-content-p">メールアドレス：support@minnano-nooto</p>
+                <p class="footer-content-p" id="footer-content-p-spec">お問い合わせ</p>
+                <p class="footer-content-p">よくある質問</p>
+                <p class="footer-content-p">電話番号：010-00000000</p>
+                <p class="footer-content-p">メールアドレス：support@minnano-nooto</p>
             </div>
         </div>
 
     </div>
 
 </body>
+
 </html>

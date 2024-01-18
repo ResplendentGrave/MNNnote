@@ -167,3 +167,9 @@ ul{
     margin-top: 3px;
     margin-bottom: 3px;
 }
+.lecture-list-row-p{
+    color: #FFFFFF;
+    margin: 3px 0 4px 5px;
+    font-size: 16px;
+    font-family: 'source-han-sans-japanese', sans-serif;
+}
