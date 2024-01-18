@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Note Upload</title>
     <script src="/static/js/jquery.min.js"></script>
     <link rel="stylesheet" href="/static/css/upload.css">
 </head>
-    <body>
-        <h1>アップロード画面</h1>
+    <body class="header-tab-3">
+    <h1>ノートアップロード画面</h1>
+        <div class="form-main">
         <form method="POST", enctype="multipart/form-data">
             {% csrf_token %}
                 {% if forms%}
@@ -16,5 +17,6 @@
                 {% endif %}
             <input type="submit" value="送信">
         </form>
+        </div>
     </body>
 </html>
