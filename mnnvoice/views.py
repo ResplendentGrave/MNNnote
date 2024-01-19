@@ -12,6 +12,13 @@ def search(request):
     return render(request,"search.html")
 
 def reloc(request):
+    print(request.GET.get("a"))
+    username=request.user
+    # print(username,type(username))
+    if username.is_authenticated:
+        print('true') 
+    else: 
+        print('false')
     if request.method == 'POST':
         print(request)
         return JsonResponse({

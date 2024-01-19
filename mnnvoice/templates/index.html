@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/index.css">
-    <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/axios.min.js"></script>
+    <script src="/static/js/app.js"></script>
     <title>みんなのノート</title>
 </head>
 
 <body>
-
+    
+    <div id="test"></div>
     <div class="root">
         <div class="header header-disable" id="index-header">
             <div class="header-left">
@@ -31,6 +31,7 @@
                 </div>
             </div>
             <div class="header-right">
+                <!-- <button onclick="fun()">abc</button> -->
                 <a class="header-tab header-tab-1 header-tab-select" href="#homepage">
                     <p class="header-tab-text header-tab-text-adjust">ホームページ</p>
                     <p class="header-tab-text">Home Page</p>
@@ -65,9 +66,25 @@
         </div>
     </div>
 </body>
-
+<script src="/static/js/layui.js"></script>
 </html>
 <script>
+  
+  layui.use('laypage', function(){
+  var laypage = layui.laypage;
+  
+  //执行一个laypage实例
+  laypage.render({
+    elem: 'test' //注意，这里的 test1 是 ID，不用加 # 号
+    ,count: 50//数据总数，从服务端得到
+    // ,layout:['count','page','next','limit','refresh','skip']
+    ,jump:function(p,first){
+        console.log(p);
+        console.log(first);
+    }
+  });
+});
+
     //axios test
 
 
@@ -103,7 +120,7 @@
         $(".header-tab").removeClass("header-tab-select");
         $(".header-tab-4").addClass("header-tab-select");
         $(".header-tab-3").addClass("header-tab-3-adjustz");
-    
+
     }
     function hashchange() {
         let hash = document.location.hash;
@@ -133,15 +150,21 @@
 
         window.addEventListener('hashchange', hashchange)
     });
-    // async function fun() {
-    //     axios.post('api/reloc', {
-           
-    //         data: {
-    //             ID: 12345
-    //         }
-    //     })
-    // }
-    // fun();
+    async function fun() {
+        axios.post('api/reloc', {
+
+            data: {
+                ID: 12345
+            }
+        },
+            {
+                params: {
+                    a: 12
+                },
+            }
+        )
+    }
+    fun();
 
 
 </script>
