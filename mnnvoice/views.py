@@ -12,7 +12,7 @@ def search(request):
     return render(request,"search.html")
 
 def reloc(request):
-    print(request.GET.get("a"))
+    print(request.GET.get("auth"))
     username=request.user
     # print(username,type(username))
     if username.is_authenticated:
