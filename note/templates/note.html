@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>note</title>
     <script src="/static/js/jquery.min.js"></script>
-    
+
     <link rel="stylesheet" href="/static/css/note.css">
 </head>
 
 <body>
+    {% load static %}
     <div class="note-content">
         <div class="upper">
             <div class="note-list">
@@ -58,26 +59,79 @@
             </div>
             <div class="note-area">
                 <div class="note-area-upper">
-                    <div class="note-arr" id="note1"><div class="note-block">
+                    <div class="note-arr" id="note1">
+                        <div class="note-block">
+                            <div class="note-block-upper">
+                                <img src="{%static 'image/note.JPG'%}" class="note-img">
+                            </div>
+                            <div class="note-block-lower">
+                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <button class="note-button">詳細</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-arr" id="note2">
+                        <div class="note-block">
+                            <div class="note-block-upper">
+                                <img src="{%static 'image/note.JPG'%}" class="note-img">
+                            </div>
+                            <div class="note-block-lower">
+                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <button class="note-button">詳細</button>
+                            </div>
+                        </div>
 
-                    </div></div>
-                    <div class="note-arr" id="note2"><div class="note-block">
+                    </div>
+                    <div class="note-arr" id="note3">
+                        <div class="note-block">
+                            <div class="note-block-upper">
+                                <img src="{%static 'image/note.JPG'%}" class="note-img">
+                            </div>
+                            <div class="note-block-lower">
+                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <button class="note-button">詳細</button>
+                            </div>
+                        </div>
+                    </div>
 
-                    </div></div>
-                    <div class="note-arr" id="note3"><div class="note-block">
-
-                    </div></div>
                 </div>
                 <div class="note-area-lower">
-                    <div class="note-arr" id="note4"><div class="note-block note-block-adjust">
+                    <div class="note-arr" id="note4">
+                        <div class="note-block note-block-adjust">
+                            <div class="note-block-upper">
+                                <img src="{%static 'image/note.JPG'%}" class="note-img">
+                            </div>
+                            <div class="note-block-lower">
+                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <button class="note-button">詳細</button>
+                            </div>
+                        </div>
+                    </div>
 
-                    </div></div>
-                    <div class="note-arr" id="note5"><div class="note-block note-block-adjust">
+                    <div class="note-arr" id="note5">
+                        <div class="note-block note-block-adjust">
+                            <div class="note-block-upper">
+                                <img src="{%static 'image/note.JPG'%}" class="note-img">
+                            </div>
+                            <div class="note-block-lower">
+                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <button class="note-button">詳細</button>
+                            </div>
+                        </div>
+                    </div>
 
-                    </div></div>
-                    <div class="note-arr" id="note6"><div class="note-block note-block-adjust">
+                    <div class="note-arr" id="note6">
+                        <div class="note-block note-block-adjust">
+                            <div class="note-block-upper">
+                                <img src="{%static 'image/note.JPG'%}" class="note-img">
+                            </div>
+                            <div class="note-block-lower">
+                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <button class="note-button">詳細</button>
+                            </div>
+                        </div>
+                    </div>
 
-                    </div></div>
                 </div>
             </div>
         </div>
