@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    
+
     <!-- <div id="test"></div> -->
     <div class="root">
         <div class="header header-disable" id="index-header">
@@ -67,23 +67,24 @@
     </div>
 </body>
 <script src="/static/js/layui.js"></script>
+
 </html>
 <script>
-  
-  layui.use('laypage', function(){
-  var laypage = layui.laypage;
-  
-  //执行一个laypage实例
-  laypage.render({
-    elem: 'test' //注意，这里的 test1 是 ID，不用加 # 号
-    ,count: 50//数据总数，从服务端得到
-    // ,layout:['count','page','next','limit','refresh','skip']
-    ,jump:function(p,first){
-        console.log(p);
-        console.log(first);
-    }
-  });
-});
+
+    layui.use('laypage', function () {
+        var laypage = layui.laypage;
+
+        //执行一个laypage实例
+        laypage.render({
+            elem: 'test' //注意，这里的 test1 是 ID，不用加 # 号
+            , count: 50//数据总数，从服务端得到
+            // ,layout:['count','page','next','limit','refresh','skip']
+            , jump: function (p, first) {
+                console.log(p);
+                console.log(first);
+            }
+        });
+    });
 
     //axios test
 
@@ -121,6 +122,12 @@
         $(".header-tab-4").addClass("header-tab-select");
         $(".header-tab-3").addClass("header-tab-3-adjustz");
 
+    }
+    window.uploadToNote = function(str){
+        document.getElementById("note-frame").src = "note"
+    }
+    window.toUpload = function(str){
+        document.getElementById("note-frame").src = "upload"
     }
     function hashchange() {
         let hash = document.location.hash;
