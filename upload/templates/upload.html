@@ -15,7 +15,7 @@
                 {% if forms%}
                 {{ forms.as_p}}
                 {% endif %}
-            <input type="submit" value="送信" class="btn-submit">
+            <input type="submit" value="送信" class="btn-submit" onclick="parent.uploadToNote();">
             <button class="btn-tonote" onclick="parent.uploadToNote();">戻る</button>
         </form>
         </div>
