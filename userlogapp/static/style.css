@@ -57,5 +57,10 @@ body {
   display: flex;
 }
 
+.error{
+  font-weight: bold;
+  color: red;
+}
+
 
 

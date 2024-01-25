@@ -32,4 +32,4 @@ class UploadModel(models.Model):
     lecture_model = models.ForeignKey(LectureMpdel, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.note_title
+        return self.lecture_model.name +  '/' + self.lecture_choice + '/' + self.note_title
