@@ -128,7 +128,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_DIR = [
     BASE_DIR/"static",
-    "note/static/"
+    "note/static/",
+    "userlogapp/static/",
 ]
 
 # Default primary key field type

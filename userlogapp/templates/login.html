@@ -21,6 +21,13 @@
     </div>
 
     <br>
+ {% if messages %}
+	  <ul class="messages">
+		  {% for message in messages %}
+			  <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		  {% endfor %}
+	  </ul>
+  {% endif %}
 
     <p class="index-para">岩手大学学生同士をONE TEAMに</p>
     <p class="index-para">Make the Iwate University's Students</p>
