@@ -36,7 +36,7 @@
                 <div class="searchbar-border">
                     <input type="search" placeholder="検索" class="searchbar-input">
                     <div class="searchbar-button-border">
-                        <button type="button" class="searchbar-button" id="button" title="button"> </button>
+                        <button type="button" class="searchbar-button" id="button" title="button" href="#lecture"> </button>
                     </div>
                 </div>
             </div>
@@ -55,9 +55,11 @@
 <script>
     //window.$=window.parent.$;
     $(document).ready(function () {
+
         $("#button").click(function (e) {
             console.log(window.parent.toLecture());
         })
+        
         //$("#button").click(function(1,2){
         //     console.log(window.parent.showHeader());
         // })

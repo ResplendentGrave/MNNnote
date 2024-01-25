@@ -108,7 +108,9 @@ body{
     flex: 1;
     position: relative;
     height: 70px;
-    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+    left: 60px;
 }
 .searchbar-border{
     width: 900px;

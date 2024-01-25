@@ -222,7 +222,8 @@ ul{
     border: none;
     border-radius: 3px;
     position: relative;
-    left: 25%;
+    left: 20%;
+    
 }
 .note-block-upper{
     flex: 1;
