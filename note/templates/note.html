@@ -17,50 +17,50 @@
             <div class="note-list">
                 <div class="note-list-content">
                     <div class="note-list-row" id="list-head">
-                        <p class="note-list-row-p" id="list-head-p">lecture title</p>
+                        <p class="note-list-row-p" id="list-head-p"></p>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list1">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list2">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list3">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list4">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list5">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list6">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list7">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list8">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row" id="list-end">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p" id="list9">lecture name</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
@@ -243,7 +243,23 @@
         </div>
 
     </div>
-    
+    <script>
+        window.parent.addEventListener("hashchange", () => {
+            if (window.parent.location.hash === "#note") {
+                $("#list-head-p").text(window.parent.store.get("searchValue"));
+                $("#list1").text(window.parent.store.get("searchValue")+"1回目");
+                $("#list2").text(window.parent.store.get("searchValue")+"2回目");
+                $("#list3").text(window.parent.store.get("searchValue")+"3回目");
+                $("#list4").text(window.parent.store.get("searchValue")+"4回目");
+                $("#list5").text(window.parent.store.get("searchValue")+"5回目");
+                $("#list6").text(window.parent.store.get("searchValue")+"6回目");
+                $("#list7").text(window.parent.store.get("searchValue")+"7回目");
+                $("#list8").text(window.parent.store.get("searchValue")+"8回目");
+                $("#list9").text(window.parent.store.get("searchValue")+"9回目");
+
+            }
+        })
+    </script>
 </body>
 
 </html>

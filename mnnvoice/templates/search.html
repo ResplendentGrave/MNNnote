@@ -34,9 +34,17 @@
         <div class="lower">
             <div class="searchbar">
                 <div class="searchbar-border">
-                    <input type="search" placeholder="検索" class="searchbar-input" id="searchValue">
+                    <input type="search" list="lecture01" placeholder="検索" class="searchbar-input" id="searchValue">
+                    <datalist id="lecture01">
+                        <option value="ネットワークセキュリティ">
+                        <option value="ソフトウェア構成論">
+                        <option value="数値計算">
+                        <option value="コンピュータアニメーション">
+                        <option value="ネットワークシステム">
+                    </datalist>
                     <div class="searchbar-button-border">
-                        <button type="button" class="searchbar-button" id="button" title="button" href="#lecture"> </button>
+                        <button type="button" class="searchbar-button" id="button" title="button" href="#lecture">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -57,10 +65,10 @@
     $(document).ready(function () {
 
         $("#button").click(function (e) {
-            window.parent.store.set("searchValue",document.getElementById('searchValue').value);
-            window.parent.location.hash="#lecture";
+            window.parent.store.set("searchValue", document.getElementById('searchValue').value);
+            window.parent.location.hash = "#lecture";
         })
-        
+
         //$("#button").click(function(1,2){
         //     console.log(window.parent.showHeader());
         // })
@@ -68,5 +76,5 @@
         // window.showHeader=function(a,b)
 
     })
- 
+
 </script>
