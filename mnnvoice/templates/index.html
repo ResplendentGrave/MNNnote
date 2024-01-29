@@ -123,6 +123,21 @@
         $(".header-tab-3").addClass("header-tab-3-adjustz");
 
     }
+    
+    window.store={
+        _store:new Map(),
+        set:function(key,value){
+            this._store.set(key,value)
+        },
+        get:function(key){
+        return this._store.get(key)
+        }
+    }
+
+
+
+
+
     window.uploadToNote = function(str){
         document.getElementById("note-frame").src = "note"
     }
@@ -131,6 +146,7 @@
     }
     function hashchange() {
         let hash = document.location.hash;
+        console.log(hash);
         if (hash === '#homepage') {
             window.toSearch();
         }
