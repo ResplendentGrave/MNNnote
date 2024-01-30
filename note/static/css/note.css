@@ -137,10 +137,16 @@ ul{
 .note-list-row-p{
     color: #FFFFFF;
     margin: 5px 0 5px 5px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'source-han-sans-japanese', sans-serif;
     position: absolute;
-    
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.note-list-row-p:hover{
+    width: 600px;
 }
 .upload-icon{
     position: relative;
