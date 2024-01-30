@@ -16,57 +16,60 @@
         <div class="upper">
             <div class="note-list">
                 <div class="note-list-content">
+                    {% comment %} {% if models %} {% endcomment %}
                     <div class="note-list-row" id="list-head">
-                        <p class="note-list-row-p" id="list-head-p">lecture title</p>
+                        <p class="note-list-row-p" id="list-head-p">{{models.0.name}}</p>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title1}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title2}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title3}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title4}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title5}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title6}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title7}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title8}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
                     <div class="note-list-row" id="list-end">
-                        <span class="note-list-row-p">lecture name</span>
+                        <span class="note-list-row-p">{{models.0.title9}}</span>
                         <img src="{%static 'image/ze-edit.svg'%}" class="upload-icon" onclick="parent.toUpload();">
                         <span class="upload-time">2024-1-1</span>
                     </div>
+                    {% comment %} {% endif %} {% endcomment %}
                 </div>
             </div>
             <div class="note-area">
+            {% comment %} {% if note_models %}  {% endcomment %}
                 <div class="note-area-upper">
                     <div class="note-arr" id="note1">
                         <div class="note-block">
@@ -74,8 +77,8 @@
                                 <img src="{%static 'image/note.JPG'%}" class="note-img">
                             </div>
                             <div class="note-block-lower">
-                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
-                                <button class="note-button">詳細</button>
+                                <p class="note-title">{{note_models.0.note_title}}</p>
+                                <button class="note-button" onclick=divOnClick(event)>詳細</button>
                             </div>
                         </div>
                     </div>
@@ -85,7 +88,7 @@
                                 <img src="{%static 'image/note.JPG'%}" class="note-img">
                             </div>
                             <div class="note-block-lower">
-                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <p class="note-title">{{note_models.1.note_title}}</p>
                                 <button class="note-button">詳細</button>
                             </div>
                         </div>
@@ -97,7 +100,7 @@
                                 <img src="{%static 'image/note.JPG'%}" class="note-img">
                             </div>
                             <div class="note-block-lower">
-                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <p class="note-title">{{note_models.2.note_title}}</p>
                                 <button class="note-button">詳細</button>
                             </div>
                         </div>
@@ -111,7 +114,7 @@
                                 <img src="{%static 'image/note.JPG'%}" class="note-img">
                             </div>
                             <div class="note-block-lower">
-                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <p class="note-title">{{note_models.3.note_title}}</p>
                                 <button class="note-button">詳細</button>
                             </div>
                         </div>
@@ -123,7 +126,7 @@
                                 <img src="{%static 'image/note.JPG'%}" class="note-img">
                             </div>
                             <div class="note-block-lower">
-                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <p class="note-title">{{note_models.4.note_title}}</p>
                                 <button class="note-button">詳細</button>
                             </div>
                         </div>
@@ -135,13 +138,14 @@
                                 <img src="{%static 'image/note.JPG'%}" class="note-img">
                             </div>
                             <div class="note-block-lower">
-                                <p class="note-title">これはノート。これはノート。これはノート。これはノート。</p>
+                                <p class="note-title">{{note_models.5.note_title}}</p>
                                 <button class="note-button">詳細</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
+            {% comment %} {% endif %} {% endcomment %}
             </div>
         </div>
         <div class="middle">
@@ -243,6 +247,14 @@
         </div>
 
     </div>
+    <script>
+    const divOnClick = () => {
+        console.log('Clicked!');
+        var buttonText = event.currentTarget.querySelector('p').textContent;
+        console.log(buttonText);
+
+    }
+    </script>
     
 </body>
 

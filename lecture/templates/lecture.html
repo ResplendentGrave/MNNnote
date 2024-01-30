@@ -14,7 +14,7 @@
                 <div class="title-left" style="display: flex; align-items: center; border: 2px solid #BBBBBB; border-radius: 10px; padding-left: 16px; padding-top: 8px; padding-bottom: 8px; height: 45px;"><p style="font-size: 18px; color: white;">講義目次/Lecture List</p></div>
                 <div class="lecture-list" style="display: flex; font-size: 20px; gap: 8px; flex-direction: column; margin: 16px 0;">
                     {% if models %}
-                    <button type="" style="background-color: inherit; display: flex; align-items: center; border: 1px solid #BBBBBB; border-left: none; border-right: none; padding: 4px 0; height: 50px;" onclick="divOnClick()" class="lecture-left-list-item" class="title"><p style="font-size: 20px; color: white;">{{models.0.name}}</p></button>
+                    <button type="" style="background-color: inherit; display: flex; align-items: center; border: 1px solid #BBBBBB; border-left: none; border-right: none; padding: 4px 0; height: 50px;" onclick="divOnClick(event)" class="lecture-left-list-item" class="title"><p style="font-size: 20px; color: white;">{{models.0.name}}</p></button>
                     <button style="background-color: inherit; display: flex; align-items: center; border: 1px solid #BBBBBB; border-left: none; border-right: none; padding: 4px 0; height: 50px;" onclick="divOnClick()"><p style="font-size: 20px; color: white;">{{models.1.name}}</p></button>
                     <button style="background-color: inherit; display: flex; align-items: center; border: 1px solid #BBBBBB; border-left: none; border-right: none; padding: 4px 0; height: 50px;" onclick="divOnClick()"><p style="font-size: 20px; color: white;">{{models.2.name}}</p></button>
                     <button style="background-color: inherit; display: flex; align-items: center; border: 1px solid #BBBBBB; border-left: none; border-right: none; padding: 4px 0; height: 50px;" onclick="divOnClick()"><p style="font-size: 20px; color: white;">{{models.3.name}}</p></button>
@@ -78,11 +78,34 @@
     
     <script>
         const divOnClick = () => {
-            console.log('clicked')
+            var buttonText = event.currentTarget.querySelector('p').textContent;
+            console.log(buttonText);
+            $.ajax({
+                type : "POST",
+                url  : "{% url 'note_app:note_base'%}",
+                data : {buttonText:buttonText},
+                success:function(data){
+                    console.log("POST request successful", data);
+
+                    var iframeId = "note-frame";
+                     var iframeDocument = window.parent.document.getElementById(iframeId).contentWindow.document;
+
+                    window.parent.location.hash="#note";
+
+                    // HTMLを挿入
+                    iframeDocument.open();
+                    iframeDocument.write(data);
+                    iframeDocument.close();
+                },
+                error: function(dat){
+                    console.error("POST request failed", error);
+                }
+            })
         }
         window.parent.addEventListener("hashchange",()=>{
             if(window.parent.location.hash==="#lecture"){
                 $(".title:first p:first").text(window.parent.store.get("searchValue"));
+                console.log('Hello');
             }
             
         })
