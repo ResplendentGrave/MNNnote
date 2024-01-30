@@ -57,16 +57,37 @@
     $(document).ready(function () {
 
         $("#button").click(function (e) {
-            window.parent.store.set("searchValue",document.getElementById('searchValue').value);
-            window.parent.location.hash="#lecture";
-        })
-        
-        //$("#button").click(function(1,2){
-        //     console.log(window.parent.showHeader());
-        // })
-        //--->parent page
-        // window.showHeader=function(a,b)
+            //window.parent.store.set("searchValue",document.getElementById('searchValue').value);
+            //window.parent.location.hash="#lecture";
 
+            var searchValue = document.getElementById('searchValue').value;
+            console.log("searchValue = ", searchValue)
+
+            window.parent.store.set("searchvalue", searchValue);
+
+            $.ajax({
+                type : "POST",
+                url  : "{% url 'lecture_app:lecture_base' %}",
+                data : {searchValue:searchValue},
+                success: function(data){
+                    console.log("POST request successful", data);
+
+                    var iframeId = "lecture-frame";
+
+                    var iframeDocument = window.parent.document.getElementById(iframeId).contentWindow.document;
+
+                    window.parent.location.hash="#lecture";
+
+                    // HTMLを挿入
+                    iframeDocument.open();
+                    iframeDocument.write(data);
+                    iframeDocument.close();
+                },
+                error: function(dat){
+                    console.error("POST request failed", error);
+                }
+            })
+        })
     })
  
 </script>
