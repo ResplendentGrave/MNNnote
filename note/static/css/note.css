@@ -147,6 +147,7 @@ ul{
 }
 .note-list-row-p:hover{
     width: 600px;
+    cursor: pointer;
 }
 .upload-icon{
     position: relative;
@@ -169,6 +170,7 @@ ul{
 }
 #list-head-p{
     font-size: 24px;
+    width: 500px;
 }
 #note1{
     margin: 30px 0 0 70px;
