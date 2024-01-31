@@ -16,7 +16,7 @@ def upload(request):
             else:
                 print('ログインしていないユーザーです!')
             forms.save()
-        return redirect("/home/#note")
+        return render(request, "note.html")
     
     forms.fields['lecture_model'].label = "講義名を選択" 
 
